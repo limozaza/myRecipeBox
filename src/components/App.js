@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 
 class App extends React.Component{
 
@@ -6,7 +7,7 @@ class App extends React.Component{
   render(){
     return(
       <div className="box">
-        <h1>{this.props.params.pseudo}</h1>
+        <Header pseudo={this.props.params.pseudo} />
           <div className="cards">
             <div className="card">
             </div>

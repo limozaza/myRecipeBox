@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotFound = () => {
   return (
-    <p className="notFound">Y a rien ici !!</p>
+    <h2 className="notFound">Y a rien ici !!</h2>
   );
 };
 export default NotFound;
