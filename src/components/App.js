@@ -30,6 +30,16 @@ class App extends React.Component{
     this.setState({recettes});
   };
 
+  ajouterRecette = (recette) => {
+    const recettes = {...this.state.recettes};
+    const timestamp = Date.now();
+    recettes[`recette - ${timestamp}`] = recette;
+    this.setState({
+      recettes
+    })
+  };
+
+
   render(){
 
     const cards = Object.keys(this.state.recettes).map(
@@ -44,7 +54,7 @@ class App extends React.Component{
               {cards}
             </div>
           </div>
-        <Admin chargerExemple={this.chargerExemple} />
+        <Admin chargerExemple={this.chargerExemple} ajouterRecette={this.ajouterRecette}/>
       </div>
     );
   };
